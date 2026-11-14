@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' version '8.5.2' }
+
+android {
+    namespace 'com.karthik.tamilsub'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.karthik.tamilsub'
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName '1.0'
+    }
+    signingConfigs {
+        debug {
+            enableV1Signing = true
+            enableV2Signing = true
+        }
+    }
+    sourceSets { main { manifest.srcFile 'AndroidManifest.xml'; java.srcDirs = ['src'] } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
